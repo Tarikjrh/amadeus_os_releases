@@ -1,0 +1,4 @@
+const DEFAULT_DATAGRID_ROWS = [5, 10, 25, 50, 100];
+export {
+  DEFAULT_DATAGRID_ROWS as D
+};

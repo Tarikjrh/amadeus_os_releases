@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Print styles for invoice receipts */
+@media print {
+  /* Ensure images are displayed in print */
+  img {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Prevent page breaks within receipt */
+  .invoice-receipt {
+    page-break-inside: avoid;
+  }
+
+  /* Ensure background colors and images print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Hide any print buttons or UI elements */
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Ensure receipt container is properly sized */
+.invoice-receipt {
+  width: 72mm;
+  max-width: 72mm;
+  font-family: 'EB Garamond', Georgia, 'Times New Roman', Times, serif;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #000;
+  padding: 14px 10px;
+  margin: 0 auto;
+  background-color: #fff;
+}
